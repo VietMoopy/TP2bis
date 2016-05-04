@@ -18,20 +18,19 @@
            <a href="?coup=1"><img src="./feuille.png" style="width:50px;height:50px;"></a>
            <a href="?coup=2"><img src="./ciseaux.png" style="width:50px;height:50px;"></a>
       </form>
-      Votre Coup                Celui de l'ordinateur
       <br>
         <?php
         extract($_GET);
     if (isset($coup)){
       $coupOrdi = rand(0,2);
       if($coup == $coupOrdi){
-        echo "Résultat : Egalite <br>";
+        echo "<h3> Résultat : Egalite </h3><br>";
       }
       else if(($coup == 0 && $coupOrdi == 2) || ($coup == 1 && $coupOrdi == 0) || ($coup == 2 && $coupOrdi == 1)){
-        echo "Résultat : Victoire <br>";
+        echo "<h3>Résultat : Victoire </h3> <br>";
       }
       else{
-        echo "Résultat : Defaite <br>";
+        echo "<h3>Résultat : Defaite </h3> <br>";
       }
         echo "<br> Votre Coup : <br>";
         if($coup == 0)
